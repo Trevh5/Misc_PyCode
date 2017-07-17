@@ -6,7 +6,7 @@ import time
 
 #################################################################################
 # This program was written to search downloaded HTML files for certain terms    #
-# and then rank the sites based on the number of hits.							#
+# and then rank the sites based on the number of hits.				#
 #################################################################################
 
 absolutely_unused_variable = os.system("cls")
