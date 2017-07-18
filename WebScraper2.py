@@ -1,6 +1,7 @@
 #!/bin/python
 
 import os
+import sys
 
 inputDir = 'C:\\Users\\Trevor\\Desktop\\webparsed\\'
 outputDir = 'C:\\Users\\Trevor\\Desktop\\attorneyWebsites\\'
@@ -18,6 +19,7 @@ print ('---------------------------------------------------')
 print("-- \t\t Please wait.. \t" + str(0) + " % \t\t --",)
 print ('---------------------------------------------------')
 print ('---------------------------------------------------')
+print ("\t Current Progresss: " + str(currentNum) + "/" + str(numDirectories))
 
 for filename in os.listdir(inputDir):
 	#print("--------------------------------------------------------")
@@ -36,15 +38,16 @@ for filename in os.listdir(inputDir):
 			count=count+1
 	currentNum = currentNum + 1
 	percentDone = 100 * (currentNum/numDirectories)
-	if round(percentDone) != oldPercentage:
-			oldPercentage = round(percentDone)
-			absolutely_unused_variable = os.system("cls")
-			print ('---------------------------------------------------')
-			print ('---------------------------------------------------')
-			print ("-- \t\t Please wait.. \t" + str(round(percentDone)) + " % \t\t --",)
-			print ('---------------------------------------------------')
-			print ('---------------------------------------------------')
-			sys.stdout.flush()
+	#if round(percentDone) != oldPercentage:
+			#oldPercentage = round(percentDone)
+	absolutely_unused_variable = os.system("cls")
+	print ('---------------------------------------------------')
+	print ('---------------------------------------------------')
+	print ("-- \t\t Please wait.. \t" + str(round(percentDone)) + " % \t\t --",)
+	print ('---------------------------------------------------')
+	print ('---------------------------------------------------')
+	print ("\t Current Progresss: " + str(currentNum) + "/" + str(numDirectories))
+	sys.stdout.flush()
 	#print("--------------------------------------------------------")
 
 print("DONE!")
